@@ -1,0 +1,36 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url("images.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 200px;
+    background-attachment: fixed;
+}
+
+#submit ,#inputdata { 
+    text-align: center;
+    color: red;
+    background-image: url("images.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 200px;
+    background-attachment: fixed;
+    
+  }
+
+#records {
+    text-align: center;
+    color: black;
+    font-size: 20px;
+
+}
+
+#style{
+    width: 100%;
+    height: 100%;
+    border-style: solid black;
+    background-image: url("images.jpeg");
+}
+
+

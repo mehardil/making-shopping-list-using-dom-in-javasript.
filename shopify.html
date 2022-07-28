@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        shopify list
+    </title>
+    <link rel="stylesheet" href="STYLE.css">
+</head>
+
+<body id = "body1" style="background-color: lightblue; ">
+<form >
+    <div id = "inputdata">
+         <label id="label" style ="text-shadow:2px,2px  'font-weight: bold' ;">Enter data for shopping </label><label class="inputs" id="inputs"></label>
+        <input type="text" name="items Name" id="itemsName">
+    </div>
+</form>
+        
+        <div id ="submit" class="sub"  style="margin: auto; color: blue;">
+            <button onclick="demadd()" >additems</button>
+        </div>
+   
+   
+    <div id ="records" class="addsitems" >
+        <ol id ="lists">
+            
+        </ol>
+          
+    </div>  
+<div>
+</div>
+
+</body>
+<script>
+
+function demadd()
+  {
+  
+//create li
+var inputValue = document.getElementById("itemsName");
+var orderlist = document.createElement("LI")
+var inputsval = document.createTextNode(inputValue.value +"  ");
+orderlist.appendChild(inputsval);
+
+//create remove button
+var btn = document.createElement("BUTTON");
+var txt = document.createTextNode("remove");
+btn.className = "close";
+btn.appendChild(txt);
+orderlist.appendChild(btn);
+
+
+//append li to ol
+document.getElementById("lists").appendChild(orderlist);
+
+var order2 = document.createElement("ol")
+document.getElementById("records").appendChild(order2);
+
+//clear the input value 
+var inputValue = document.getElementById("itemsName").value ="  "
+
+// add onclick event listener 
+const close = document.getElementsByClassName("close");
+
+console.log('close->',close)
+
+for (var i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var parentElementli = this.parentElement;
+    parentElementli.style.display = "none";
+  }
+}
+  
+ } 
+
+</script>    
+
